@@ -1,3 +1,2 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+siteName: "Healthy, Lean and Fit"
+mainUrl : "www.HealthyLeanAndFit.com"
