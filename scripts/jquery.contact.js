@@ -62,7 +62,7 @@ jQuery(document).ready(function(){
 		var action = $(this).attr('action');
 
  		$('#submit')
-			.after('<img src="images/ajax-loader.gif" class="loader" />')
+			.after('<img src="/images/ajax-loader.gif" class="loader" />')
 			.attr('disabled','disabled');
 
 		$.post(action, $('#contactform').serialize(),

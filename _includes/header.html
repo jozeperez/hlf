@@ -9,15 +9,15 @@
             <div class="three columns">
             
                 <div id="mobile-navigation">
-                    <form method="GET" id="menu-search" action="#">
+                    <!-- <form method="GET" id="menu-search" action="#">
                         <input type="text" placeholder="Start Typing..." />
-                    </form>
+                    </form> -->
                     <a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
-                    <span class="search-trigger"><i class="icon-search"></i></span>
+                    <!-- <span class="search-trigger"><i class="icon-search"></i></span> -->
                 </div>
 
                 <div id="logo">
-                    <h1><a href="index.html"><img src="images/logo.png" alt="Astrum" /></a></h1>
+                    <h1><a href="index.html"><img src="/images/logo-hlf.png" alt="Astrum" /></a></h1>
                 </div>
             </div>
 
@@ -28,57 +28,26 @@
 
                 <nav id="navigation" class="menu">
                     <ul id="responsive">
-
-                        <li><a href="index.html" id="current">Home</a></li>
-
-                        <li><a href="#">Shortcodes</a>
+{% for navItem in site.mainNav %}
+                        <li>
+                            <a href="{{ navItem.urlSlug }}"{% if navItem.urlSlug == page.permalink %} id="current"{% endif %}>{{ navItem.title }}</a>
+    {% if navItem.title == 'Success Stories' %}
                             <ul>
-                                <li><a href="elements.html">Elements</a></li>
-                                <li><a href="typography.html">Typography</a></li>
-                                <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                                <li><a href="icons.html">Icons</a></li>
+        {% for story in site.successStories %}
+                                <li><a href="{{ navItem.urlSlug }}{{ story.slug }}">{{ story.name }}</a></li>
+        {% endfor %}
                             </ul>
+    {% endif %}
                         </li>
-
-                        <li><a href="#">Pages</a>
-                            <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="sidebar-right.html">Right Sidebar</a></li>
-                                <li><a href="sidebar-left.html">Left Sidebar</a></li>
-                                <li><a href="404-page.html">404 Page</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Portfolio</a>
-                            <ul>
-                                <li><a href="portfolio-3-columns.html">3 Columns</a></li>
-                                <li><a href="portfolio-4-columns.html">4 Columns</a></li>
-                                <li><a href="single-project-half.html">Single Project Half</a></li>
-                                <li><a href="single-project-wide.html">Single Project Wide</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Blog</a>
-                            <ul>
-                                <li><a href="blog-large-image.html">Large Image</a></li>
-                                <li><a href="blog-medium-image.html">Medium Image</a></li>
-                                <li><a href="blog-post.html">Single Post</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="contact.html">Contact</a></li>
-                        
+{% endfor %}
                         <!-- Search Form -->        
-                        <li class="search-container">
+                        <!-- <li class="search-container">
                             <div id="search-form">
                                 <form method="get" action="#">
                                     <input type="text" class="search-text-box" />
                                 </form>
                             </div>
-                        </li>
-                        
+                        </li> -->
                     </ul>
                 </nav>
             </div>

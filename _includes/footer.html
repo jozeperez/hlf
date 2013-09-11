@@ -7,7 +7,7 @@
 
             <div class="four columns">
                 <h3>About</h3>
-                <p style="margin:0;">Donec consectetur diam ac nibh auctor ultricies. Integer mauris lacus, consequat in luctus id, semper sed felis. Cum sociis natoque penatibus et magnis.</p>
+                <p style="margin:0;">If you are seeking health, happiness, freedom or the combination of all three you have come to the right place. Your journey to a happier and healthier you begins right now.</p>
             </div>
 
             <div class="four columns">
@@ -30,9 +30,18 @@
             <div class="four columns">
                 <h3>Get In Touch</h3>
                 <ul class="get-in-touch">
-                    <li ><i class="icon-map-marker"></i> <p><strong>Address:</strong> 120 Seward Street, <br />Oklahoma City, USA</p></li>
-                    <li><i class="icon-user"></i> <p><strong>Phone:</strong> +48 880 440 140</p></li>
-                    <li><i class="icon-envelope-alt"></i> <p><strong>Email:</strong> <a href="#">mail@example.com</a></p></li>
+                    <li>
+                        <i class="icon-map-marker"></i>
+                        <p><strong>Address:</strong> {{ site.footerAddress }}</p>
+                    </li>
+                    <li>
+                        <i class="icon-user"></i>
+                        <p><strong>Phone:</strong> {{ site.footerTelephone }}</p>
+                    </li>
+                    <li>
+                        <i class="icon-envelope-alt"></i>
+                        <p><strong>Email:</strong> <a href="mailto:{{ site.footerEmail }}">{{ site.footerEmail }}</a></p>
+                    </li>
                 </ul>
             </div>
 
@@ -58,7 +67,7 @@
         <!-- Container -->
         <div class="container">
 
-            <div class="eight columns">© Copyright 2013 by <a href="#">Astrum</a>. All Rights Reserved.</div>
+            <div class="eight columns">© Copyright {{ %Y }} by <a class="no-click">Healthy, Lean and Fit</a>. All Rights Reserved.</div>
             <div class="eight columns">
                 <ul class="social-icons-footer">
                     <li><a href="#" class="tooltip top" title="Twitter"><i class="icon-twitter"></i></a></li>

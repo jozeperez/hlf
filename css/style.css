@@ -35,12 +35,12 @@
 
 /* Logo
 ====================================*/
-#logo { margin-top: 32px; }
+#logo { margin-top: 11px; }
 
 #logo a img {
 	float: left;
 	width: auto;
-	height: 24px;
+	height: 64px;
 }
 
 
@@ -255,12 +255,12 @@
 	body { padding-top: 0; }
 
 	#header #logo {
-		width: 124px;
+		width: 336px;
 		left: 0;
 		right: 0;
 		position: absolute;
-		margin: 0 auto;
-		margin-top: 28px;
+		margin: 0 auto 0 54px;
+		margin-top: 8px;
 		z-index: 99;
 	}
 
