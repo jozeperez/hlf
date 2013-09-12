@@ -2,6 +2,25 @@
 layout: "default"
 title: ""
 permalink: "/"
+associateThumbnails:
+    - name    : 'Joze Perez'
+      fileSlug: 'joze'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Eileen Diaz-Lizardo'
+      fileSlug: 'eileen'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Jose Diaz-Lizardo'
+      fileSlug: 'jr'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Carolina Avalo'
+      fileSlug: 'carolina'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Jimmy Lopez'
+      fileSlug: 'jimmy'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Gustavo Urbina'
+      fileSlug: 'gustavo'
+      product : 'Isagenix 30 day cleanse system'
 ---
 	<!-- Content Wrapper / Start -->
     <div id="content-wrapper">
@@ -262,7 +281,7 @@ permalink: "/"
 
             <!-- Headline -->
             <div class="sixteen columns">
-                <h3 class="headline">Our Clients</h3>
+                <h3 class="headline">Success Stories</h3>
                 <span class="line" style="margin-bottom:0;"></span>
             </div>
 
@@ -278,13 +297,13 @@ permalink: "/"
 
                     <ul>
                         <!-- Item -->
-                        <li><img src="/images/logo-01.png" alt="" /></li>
-                        <li><img src="/images/logo-02.png" alt="" /></li>
-                        <li><img src="/images/logo-03.png" alt="" /></li>
-                        <li><img src="/images/logo-04.png" alt="" /></li>
-                        <li><img src="/images/logo-05.png" alt="" /></li>
-                        <li><img src="/images/logo-06.png" alt="" /></li>
-                        <li><img src="/images/logo-07.png" alt="" /></li>
+{% for associate in page.associateThumbnails %}
+                        <li>
+                            <a href="#">
+                                <img src="/images/associates/associate-{{ associate.fileSlug }}.png" alt="{{ associate.name }} started with {{ associate.product }}" />
+                            </a>
+                        </li>
+{% endfor %}
                     </ul>
                     <div class="clearfix"></div>
 
