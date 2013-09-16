@@ -3,4 +3,223 @@ layout: "default"
 title: "Contact Me"
 permalink: "/contact/"
 ---
-<h1>{{ page.title }}</h1>
+    <!-- Google Maps -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="/scripts/jquery.gmaps.min.js"></script>
+
+    <!-- Content Wrapper / Start -->
+    <div id="content-wrapper">
+
+        <!-- Titlebar
+        ================================================== -->
+        <section id="titlebar">
+            <!-- Container -->
+            <div class="container">
+
+                <div class="eight columns">
+                    <h2>Contact</h2>
+                </div>
+
+                <div class="eight columns">
+                    <nav id="breadcrumbs">
+                        <ul>
+                            <li>You are here:</li>
+                            <li>
+                                <a href="/" title="Home of {{ site.name }} ">Home</a>
+                            </li>
+                            <li>Contact</li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <!-- Container / End -->
+        </section>
+
+        <!-- Content
+        ================================================== -->
+
+        <!-- Container -->
+        <div class="container">
+            <div class="sixteen columns">
+                <h3 class="headline">Our Location</h3>
+                <span class="line" style="margin-bottom: 35px;"></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Container / End -->
+
+        <!-- Container -->
+        <div class="container">
+            <div class="sixteen columns">
+
+                <!-- Google Maps -->
+                <section class="google-map-container">
+
+                    <div id="googlemaps" class="google-map google-map-full"></div>
+
+                    <script type="text/javascript">
+                    jQuery('#googlemaps').gMap({
+                        maptype: 'ROADMAP',
+                        scrollwheel: false,
+                        zoom: 7,
+                        markers: [
+                            {
+                                address: 'Orlando, FL, USA',
+                                html: '',
+                                popup: false
+                            },
+                            {
+                                address: 'Gainesvill, FL, USA',
+                                html: '',
+                                popup: false
+                            }
+                        ]
+                        // ,
+                        // latitude: -28.1,
+                        // longitude: -81.6
+                    });
+                </script>
+
+                </section>
+                <!-- Google Maps / End -->
+
+            </div>
+        </div>
+        <!-- Container / End -->
+
+        <!-- Container -->
+        <div class="container">
+
+            <div class="twelve alt columns">
+
+                <h3 class="headline">Contact Form</h3>
+                <span class="line" style="margin-bottom: 35px;"></span>
+                <div class="clearfix"></div>
+
+                <!-- Contact Form -->
+                <section id="contact">
+
+                    <!-- Success Message -->
+                    <mark id="message"></mark>
+
+                    <!-- Form -->
+                    <form method="post" action="contact.php" name="contactform" id="contactform">
+
+                        <fieldset>
+
+                            <div>
+                                <label for="name" accesskey="U">Name:</label>
+                                <input name="name" type="text" id="name" />
+                            </div>
+
+                            <div>
+                                <label for="email" accesskey="E">
+                                    Email:
+                                    <span>*</span>
+                                </label>
+                                <input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
+                            </div>
+
+                            <div>
+                                <label for="comments" accesskey="C">
+                                    Message:
+                                    <span>*</span>
+                                </label>
+                                <textarea name="comments" cols="40" rows="3" id="comments" spellcheck="true"></textarea>
+                            </div>
+
+                        </fieldset>
+
+                        <input type="submit" class="submit" id="submit" value="Send Message" />
+                        <div class="clearfix"></div>
+
+                    </form>
+
+                </section>
+                <!-- Contact Form / End -->
+
+            </div>
+            <!-- Container / End -->
+
+            <!-- Sidebar
+            ================================================== -->
+            <div class="four columns">
+
+                <!-- Information -->
+                <div class="widget" style="margin-top:0;">
+                    <h3 class="headline">Information</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <p>Have a question? <strong>Send a message.</strong> Need motivation? <strong>Send a message.</strong> Want to change your life? <strong>Send a message.</strong></p>
+
+                    <ul class="contact-informations">
+                        <li>
+                            <span class="address">{{ site.addressLine1 }}</span>
+                        </li>
+                        <li>
+                            <span class="address">{{ site.addressLine2 }}</span>
+                        </li>
+                    </ul>
+
+                    <ul class="contact-informations second">
+                        <li> <i class="icon-user"></i>
+                            <p>{{ site.footerTelephone }}</p>
+                        </li>
+                        <li> <i class="icon-envelope-alt"></i>
+                            <p>{{ site.footerEmail }}</p>
+                        </li>
+                        <li>
+                            <i class="icon-globe"></i>
+                            <p>{{ site.mainUrl }}</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Social -->
+                <div class="widget">
+                    <h3 class="headline">Social Media</h3>
+                    <span class="line" style="margin-bottom: 25px;"></span>
+                    <div class="clearfix"></div>
+                    <ul class="social-icons">
+                        <li>
+                            <a class="twitter" href="#">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dribbble" href="#">
+                                <i class="icon-dribbble"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="#">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pinterest" href="#">
+                                <i class="icon-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="forrst" href="#">
+                                <i class="icon-forrst"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="rss" href="#">
+                                <i class="icon-rss"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Container / End -->
+
+    </div>
+    <!-- Content Wrapper / End -->
