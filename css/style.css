@@ -1151,7 +1151,8 @@ ol.social-icons li { margin: 0 4px 0 0 !important; }
 .caption p {
 	font-size: 16px;
 	font-weight: 500;
-	color: #888;
+	/*color: #888;*/
+	color: #444;
 	line-height: 25px;
 	font-family: "Open Sans"
 }
@@ -1166,6 +1167,10 @@ ol.social-icons li { margin: 0 4px 0 0 !important; }
 
 .caption.light p {
 	color: #999;
+}
+
+.caption.t-white {
+	color: white !important;
 }
 
 
