@@ -2083,7 +2083,7 @@ html[xmlns] .slides {display: block;}
 	left: 38%
 }
 
-.post-content { margin: -57px 0 0 89px }
+/*.post-content { margin: -57px 0 0 89px }*/
 .medium .post-content {margin:0;}
 .post-content h2 a { color: #505050; }
 .post-content h2 a:hover { color: #707070; }
@@ -3403,6 +3403,16 @@ blockquote {
 	color: #a0a0a0;
 	line-height: 24px;
 	margin: 5px 0 20px 15px;
+}
+blockquote .author {
+	display: block;
+	float: right;
+	font-weight: bold;
+	font-style: italic;
+}
+blockquote .author span {
+	display: block;
+	font-weight: normal !important;
 }
 
 
