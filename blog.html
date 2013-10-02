@@ -1,0 +1,268 @@
+---
+layout: "default"
+title: "Isagenix&reg; Blog"
+permalink: "/isagenix-blog/"
+---
+        <div id="content-wrapper">
+            <!-- titlebar -->
+            <section id="titlebar">
+                <div class="container">
+                    <div class="eight columns">
+                        <h2>Our Blog</h2>
+                    </div>
+                    <div class="eight columns">
+                        <nav id="breadcrumbs">
+                            <ul>
+                                <li>You are here:</li>
+                                <li><a href="#">Home</a></li>
+                                <li>Blog</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <!-- end titlebar -->
+
+            <!-- main page content -->
+            <div class="container">
+                <!-- twelve columns -->
+                <div class="twelve alt columns">
+{% for post in site.posts %}
+                    <!-- blog/news post -->
+                    <article class="post medium">
+                        <div class="five alt columns alpha">
+                            <figure class="post-img media">
+                                <div class="mediaholder">
+                                    <a href="blog-post.html">
+                                        <img src="/images/blog-01b.jpg" alt=""/>
+                                        <div class="hovercover">
+                                            <div class="hovericon"><i class="hoverlink"></i></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="seven columns">
+                            <section class="post-content">
+                                <header class="meta">
+                                    <h2><a href="blog-post.html">How To Download The Google Fonts Catalog</a></h2>
+                                    <ul>
+                                        <li>By <a href="#">Charlie Smith</a> - 28 May 2013</li>
+                                        <li><a href="#">2 Comments</a></li>
+                                    </ul>
+                                </header>
+                                <p>Morbi placerat bibendum eget dolor lorem pellentesque sed consectetur pulvinar pellentesque consectetur pulvinarea pellentesque bibendum. Vestibulum varius hendrerit bibendum. Vestibulum varius hendrerit turpis quiseam cursus bibendum vestibulum pellentesque condimentum.</p>
+                                <a href="blog-post.html" class="button color">Read More</a>
+                            </section>
+                        </div>
+                        <div class="clearfix"></div>
+                    </article>
+                    <!-- end blog/news post -->
+{% endfor %}
+
+                    <!-- blog pagination -->
+                    <nav class="pagination">
+                        <ul>
+                            <li><a href="#" class="current">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">Next</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </nav>
+                    <!-- end blog pagination -->
+                </div>
+                <!-- end twelve columns -->
+
+                <!-- sidebar (four columns) -->
+                <div class="four columns">
+                    <!-- search form -->
+                    <fieldset class="search-form" action="#" method="get">
+                        <button class="search-btn" type="submit"><i class="icon-search"></i></button>
+                        <input class="search" type="text" onblur="if(this.value=='')this.value='Search';" onfocus="if(this.value=='Search')this.value='';" value="Search" />
+                    </fieldset>
+                    <!-- end search form -->
+
+                    <!-- about -->
+                    <div class="widget">
+                        <h3 class="headline">About</h3><span class="line"></span><div class="clearfix"></div>
+                        <p>Morbi eros bibendum lorem ipsum dolor pellentesque sed vel consectetur pulvinar pellentesque varius bibendum. </p>
+                    </div>
+                    <!-- end about -->
+                
+                
+                    <!-- categories -->
+                    <div class="widget">
+                        <h3 class="headline">Categories</h3><span class="line"></span><div class="clearfix"></div>
+                        <nav class="categories">
+                            <ul>
+                                <li><a href="#">Music</a></li>
+                                <li><a href="#">Painting</a></li>
+                                <li><a href="#">Entertainment</a></li>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Photography</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- end categories -->
+
+                    <!-- tabs -->
+                    <div class="widget" style="margin: 40px 0 0 0;">
+                        <!-- tabs navigation -->
+                        <ul class="tabs-nav blog">
+                            <li class="active"><a href="#tab1" title="Recent Posts"><i class="icon-time"></i></a></li>
+                            <li><a href="#tab2" title="Popular Posts"><i class="icon-star"></i></a></li>
+                            <li><a href="#tab3" title="Recent Comments"><i class="icon-comments-alt"></i></a></li>
+                        </ul>
+
+                        <!-- tabs content -->
+                        <div class="tabs-container">
+                            <!-- recent posts -->
+                            <div class="tab-content" id="tab1">
+                                <ul class="widget-tabs">
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-01.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <h4><a href="blog-post.html">How To Download The Google Fonts Catalog</a></h4>
+                                            <span>28 May 2013</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-02.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <h4><a href="blog-post.html">The State of the Digital Music Industry</a></h4>
+                                            <span>16 May 2013</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-03.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <h4><a href="blog-post.html">Solving the Puzzles of Mimicry in Nature</a></h4>
+                                            <span>10 May 2013</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end recent posts -->
+
+                            <!-- popular posts -->
+                            <div class="tab-content" id="tab2">
+                                <ul class="widget-tabs">
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-04.jpg" alt="" /></a>
+                                        </div>
+                                        
+                                        <div class="widget-text">
+                                            <h4><a href="blog-post.html">New Sugary Drink Rules Complicate Coffee Orders</a></h4>
+                                            <span>19 April 2013</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-01.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <h4><a href="blog-post.html">How To Download The Google Fonts Catalog</a></h4>
+                                            <span>28 May 2013</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-05.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <h4><a href="blog-post.html">Mobile Editing Tools For Smartphone Photos</a></h4>
+                                            <span>03 May 2013</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end popular post -->
+
+                            <!-- recent comments -->
+                            <div class="tab-content" id="tab3">
+                                <ul class="widget-tabs comments">
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=100" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <span>John Doe on:</span>
+                                            <h4><a href="blog-post.html">Solving the Puzzles of Mimicry in Nature</a></h4>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&s=100" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <span>Michael Brown on:</span>
+                                            <h4><a href="blog-post.html">Mobile Editing Tools For Smartphone Photos</a></h4>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <li>
+                                        <div class="widget-thumb">
+                                            <a href="blog-post.html"><img src="/images/blog-widget-06.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="widget-text">
+                                            <span>Vasterad on:</span>
+                                            <h4><a href="blog-post.html">How To Download The Google Fonts Catalog</a></h4>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end recent comments -->
+                        </div>
+                        <!-- end tab contents -->
+                    </div>
+                    <!-- end tabs -->
+                
+                    <!-- tags -->
+                    <div class="widget" style="margin: 13px 0 0 0;">
+                        <h3 class="headline">Tags</h3><span class="line"></span><div class="clearfix"></div>
+                    
+                        <nav class="tags">
+                            <a href="#">Nature</a>
+                            <a href="#">Entertainment</a>
+                            <a href="#">Puzzles</a>
+                            <a href="#">Photography</a>
+                            <a href="#">Tourism</a>
+                            <a href="#">Painting</a>
+                            <a href="#">WordPress</a>
+                            <a href="#">ThemeForest</a>
+                        </nav>
+                    </div>
+                    <!-- end tags -->
+
+                    <!-- archives -->
+                    <div class="widget">
+                        <h3 class="headline">Archives</h3><span class="line"></span><div class="clearfix"></div>
+                        <nav class="categories">
+                            <ul>
+                                <li><a href="#">May 2013</a></li>
+                                <li><a href="#">February 2013</a></li>
+                                <li><a href="#">January 2013</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- end archives -->
+                </div>
+                <!-- end sidebar (four columns) -->
+            </div>
+            <!-- end main page content -->
+        </div>
