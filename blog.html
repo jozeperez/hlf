@@ -33,8 +33,8 @@ permalink: "/isagenix-blog/"
                         <div class="five alt columns alpha">
                             <figure class="post-img media">
                                 <div class="mediaholder">
-                                    <a href="blog-post.html">
-                                        <img src="/images/blog-01b.jpg" alt=""/>
+                                    <a href="{{ post.externalUrl }}" target="_blank">
+                                        <img src="/images/{{ post.image }}" alt=""/>
                                         <div class="hovercover">
                                             <div class="hovericon"><i class="hoverlink"></i></div>
                                         </div>
@@ -45,14 +45,14 @@ permalink: "/isagenix-blog/"
                         <div class="seven columns">
                             <section class="post-content">
                                 <header class="meta">
-                                    <h2><a href="blog-post.html">How To Download The Google Fonts Catalog</a></h2>
+                                    <h2><a href="{{ post.externalUrl }}" target="_blank">{{ post.title }}</a></h2>
                                     <ul>
-                                        <li>By <a href="#">Charlie Smith</a> - 28 May 2013</li>
+                                        <li>By <a href="#">{{ post.author }}</a> - {{ post.date | date_to_string }}</li>
                                         <li><a href="#">2 Comments</a></li>
                                     </ul>
                                 </header>
                                 <p>Morbi placerat bibendum eget dolor lorem pellentesque sed consectetur pulvinar pellentesque consectetur pulvinarea pellentesque bibendum. Vestibulum varius hendrerit bibendum. Vestibulum varius hendrerit turpis quiseam cursus bibendum vestibulum pellentesque condimentum.</p>
-                                <a href="blog-post.html" class="button color">Read More</a>
+                                <a href="{{ post.externalUrl }}" target="_blank" class="button color">Read More</a>
                             </section>
                         </div>
                         <div class="clearfix"></div>
