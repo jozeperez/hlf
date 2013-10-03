@@ -1,0 +1,16 @@
+            <section id="titlebar">
+                <div class="container">
+                    <div class="eight columns">
+                        <h2>{{ if page.shortTitle }}{{ page.shortTitle }}{{ else }}{{ page.title }}{{ endif }}</h2>
+                    </div>
+                    <div class="eight columns">
+                        <nav id="breadcrumbs">
+                            <ul>
+                                <li></li>
+                                <li><a href="/" title="Home of {{ site.name }}">Home</a></li>
+                                <li>{{ if page.shortTitle }}{{ page.shortTitle }}{{ else }}{{ page.title }}{{ endif }}</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>

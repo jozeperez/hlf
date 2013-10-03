@@ -3541,6 +3541,16 @@ blockquote .author span {
 	border-radius: 3px 3px 0 0;
 }
 
+.plan-image {
+	background: #e2e2e2;
+	padding: 5px;
+}
+.plan-image img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 .plan-price {
 	font-size: 36px;
 	font-weight: 300;
