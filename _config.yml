@@ -5,6 +5,11 @@ mainNav:
       urlSlug: "/"
     - title  : "Why Isagenix"
       urlSlug: "/why-isagenix/"
+      subNav :
+        - title  : "Isagenix Systems"
+          urlSlug: "/compare-isagenix-systems/"
+        - title  : "Isagenix Blog"
+          urlSlug: "/isagenix-blog/"
     - title  : "About Us"
       urlSlug: "/about-us/"
     - title  : "Success Stories"

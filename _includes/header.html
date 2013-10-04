@@ -1,13 +1,8 @@
-    <!-- Header
-    ================================================== -->
+    <!-- header -->
     <header id="header">
-
-        <!-- Container -->
         <div class="container">
-
-            <!-- Logo / Mobile Menu -->
+            <!-- logo & mobile menu -->
             <div class="three columns">
-            
                 <div id="mobile-navigation">
                     <!-- <form method="GET" id="menu-search" action="#">
                         <input type="text" placeholder="Start Typing..." />
@@ -15,26 +10,22 @@
                     <a href="#menu" class="menu-trigger"><i class="icon-reorder"></i></a>
                     <!-- <span class="search-trigger"><i class="icon-search"></i></span> -->
                 </div>
-
                 <div id="logo">
                     <h1><a href="index.html"><img src="/images/logo-hlf.png" alt="Astrum" /></a></h1>
                 </div>
             </div>
 
-
-            <!-- Navigation
-            ================================================== -->
+            <!-- navigation -->
             <div class="thirteen columns">
-
                 <nav id="navigation" class="menu">
                     <ul id="responsive">
 {% for navItem in site.mainNav %}
                         <li>
                             <a href="{{ navItem.urlSlug }}"{% if navItem.urlSlug == page.permalink %} id="current"{% endif %}>{{ navItem.title }}</a>
-    {% if navItem.title == 'Success Stories' %}
+    {% if navItem.subNav %}
                             <ul>
-        {% for story in site.successStories %}
-                                <li><a href="{{ navItem.urlSlug }}{{ story.slug }}">{{ story.name }}</a></li>
+        {% for subNavItem in navItem.subNav %}
+                                <li><a href="{{ subNavItem.urlSlug }}">{{ subNavItem.title }}</a></li>
         {% endfor %}
                             </ul>
     {% endif %}
@@ -51,10 +42,7 @@
                     </ul>
                 </nav>
             </div>
-            <!-- Navigation / End -->
-
+            <!-- end navigation -->
         </div>
-        <!-- Container / End -->
-
     </header>
-    <!-- Header / End -->
+    <!-- end header -->
