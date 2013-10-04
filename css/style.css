@@ -2616,6 +2616,13 @@ input[type="submit"]:hover {
 	background: #a0a0a0;
 }
 
+.btn-t26 {
+	font-size: 26px !important;
+}
+.btn-p15 {
+	padding: 15px !important;
+}
+
 
 /* Icons Demo
 ====================================*/

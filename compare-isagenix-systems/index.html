@@ -21,23 +21,6 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="/scripts/jquery.min.js"></script>
-    <script src="/scripts/jquery.themepunch.plugins.min.js"></script>
-    <script src="/scripts/jquery.themepunch.revolution.min.js"></script>
-    <script src="/scripts/jquery.themepunch.showbizpro.min.js"></script>
-    <script src="/scripts/jquery.easing.min.js"></script>
-    <script src="/scripts/jquery.tooltips.min.js"></script>
-    <script src="/scripts/jquery.magnific-popup.min.js"></script>
-    <script src="/scripts/jquery.superfish.js"></script>
-    <script src="/scripts/jquery.twitter.js"></script>
-    <script src="/scripts/jquery.flexslider.js"></script>
-    <script src="/scripts/jquery.jpanelmenu.js"></script>
-    <script src="/scripts/jquery.contact.js"></script>
-    <script src="/scripts/jquery.isotope.min.js"></script>
-    <script src="/scripts/custom.js"></script>
-
 </head>
 <body>
 
@@ -69,11 +52,15 @@
                         </li>
 
                         <li>
-                            <a href="/why-isagenix/">Why Isagenix</a>
+                            <a href="#isagenix">Isagenix</a>
     
                             <ul>
         
+                                <li><a href="/why-isagenix/">Why Isagenix</a></li>
+        
                                 <li><a href="/compare-isagenix-systems/">Isagenix Systems</a></li>
+        
+                                <li><a href="/isagenix-products/">Other Isagenix Products</a></li>
         
                                 <li><a href="/isagenix-blog/">Isagenix Blog</a></li>
         
@@ -147,12 +134,14 @@
                 </div>
                 <div class="plan-features">
                     <ul>
-                        <li>5GB Disk Space</li>
-                        <li>10 Email Accounts</li>
-                        <li>5GB Monthly Bandwidth</li>
-                        <li>Unlimited Subdomains</li>
+                        <li>Energy boost</li>
+                        <li>Weight-loss boost</li>
+                        <li>Improved muscle tone</li>
+                        <li>Balanced digestion</li>
+                        <li>Reduced cravings</li>
                     </ul>
-                    <a class="button light" href="#">Sign Up</a>
+                    <a class="button light" href="#">Order now</a>
+                    <!-- http://www.isagenix.com/us/en/nineday.dhtml -->
                 </div>
             </div>
                     
@@ -168,12 +157,14 @@
                 </div>
                 <div class="plan-features">
                     <ul>
-                        <li>10GB Disk Space</li>
-                        <li>15 Email Accounts</li>
-                        <li>10GB Monthly Bandwidth</li>
-                        <li>Unlimited Subdomains</li>
+                        <li>Energy boost</li>
+                        <li>Consistent weight-loss over time</li>
+                        <li>Reduced cravings for unhealthy food</li>
+                        <li>Improved muscle tone</li>
+                        <li>Balanced digestion</li>
                     </ul>
-                    <a class="button light" href="#">Sign Up</a>
+                    <a class="button light" href="#">Order now</a>
+                    <!-- http://www.isagenix.com/us/en/thirtyday.dhtml -->
                 </div>
             </div>
                     
@@ -189,12 +180,12 @@
                 </div>
                 <div class="plan-features">
                     <ul>
-                        <li>15GB Disk Space</li>
-                        <li>15 Email Accounts</li>
-                        <li>15GB Monthly Bandwidth</li>
-                        <li>Unlimited Subdomains</li>
+                        <li>Overcome stubborn weight-loss plateaus while eliminating visceral fat</li>
+                        <li>Stimulate superior muscle recovery and growth in athletes</li>
+                        <li>Assist with muscle retention and muscle tone to help you age gracefully</li>
                     </ul>
-                    <a class="button color" href="#">Sign Up</a>
+                    <a class="button color" href="#">Order now</a>
+                    <!-- http://www.isagenix.com/us/en/30dayisaleanpro.dhtml -->
                 </div>
             </div>
             
@@ -210,12 +201,14 @@
                 </div>
                 <div class="plan-features">
                     <ul>
-                        <li>35GB Disk Space</li>
-                        <li>25 Email Accounts</li>
-                        <li>35GB Monthly Bandwidth</li>
-                        <li>Unlimited Subdomains</li>
+                        <li>Weight Loss President’s Pak</li>
+                        <li>Performance President’s Pak</li>
+                        <li>Healthy Aging President’s Pak</li>
+                        <li>Rejuvity President’s Pak</li>
+                        <li>Best value of all systems</li>
                     </ul>
-                    <a class="button light" href="#">Sign Up</a>
+                    <a class="button light" href="#">Order now</a>
+                    <!-- http://www.isagenix.com/us/en/presidentspak.html -->
                 </div>
             </div>
         </div>
@@ -239,10 +232,10 @@
 
                 <ul id="twitter"></ul>
                 <script type="text/javascript">
-                    jQuery(document).ready(function($){
-                        $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
-                    $("#twitter").html(tz_format_twitter(tweets));
-                    }); });
+                    // jQuery(document).ready(function($){
+                    //     $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
+                    // $("#twitter").html(tz_format_twitter(tweets));
+                    // }); });
                 </script>
                 <div class="clearfix"></div>
 
@@ -307,6 +300,25 @@
 
     </div>
     <!-- Footer Bottom / Start -->
+
+    <!-- include theme js files -->
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/jquery.themepunch.plugins.min.js"></script>
+    <script src="/scripts/jquery.themepunch.revolution.min.js"></script>
+    <script src="/scripts/jquery.themepunch.showbizpro.min.js"></script>
+    <script src="/scripts/jquery.easing.min.js"></script>
+    <script src="/scripts/jquery.tooltips.min.js"></script>
+    <script src="/scripts/jquery.magnific-popup.min.js"></script>
+    <script src="/scripts/jquery.superfish.js"></script>
+    <script src="/scripts/jquery.twitter.js"></script>
+    <script src="/scripts/jquery.flexslider.js"></script>
+    <script src="/scripts/jquery.jpanelmenu.js"></script>
+    <script src="/scripts/jquery.contact.js"></script>
+    <script src="/scripts/jquery.isotope.min.js"></script>
+    <script src="/scripts/custom.js"></script>
+    <script src="/scripts/jquery.sameheight.js"></script>
+    <script src="/scripts/local.compare.js"></script>
+
 
 </body>
 </html>

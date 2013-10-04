@@ -21,23 +21,6 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="/scripts/jquery.min.js"></script>
-    <script src="/scripts/jquery.themepunch.plugins.min.js"></script>
-    <script src="/scripts/jquery.themepunch.revolution.min.js"></script>
-    <script src="/scripts/jquery.themepunch.showbizpro.min.js"></script>
-    <script src="/scripts/jquery.easing.min.js"></script>
-    <script src="/scripts/jquery.tooltips.min.js"></script>
-    <script src="/scripts/jquery.magnific-popup.min.js"></script>
-    <script src="/scripts/jquery.superfish.js"></script>
-    <script src="/scripts/jquery.twitter.js"></script>
-    <script src="/scripts/jquery.flexslider.js"></script>
-    <script src="/scripts/jquery.jpanelmenu.js"></script>
-    <script src="/scripts/jquery.contact.js"></script>
-    <script src="/scripts/jquery.isotope.min.js"></script>
-    <script src="/scripts/custom.js"></script>
-
 </head>
 <body>
 
@@ -69,11 +52,15 @@
                         </li>
 
                         <li>
-                            <a href="/why-isagenix/" id="current">Why Isagenix</a>
+                            <a href="#isagenix">Isagenix</a>
     
                             <ul>
         
+                                <li><a href="/why-isagenix/">Why Isagenix</a></li>
+        
                                 <li><a href="/compare-isagenix-systems/">Isagenix Systems</a></li>
+        
+                                <li><a href="/isagenix-products/">Other Isagenix Products</a></li>
         
                                 <li><a href="/isagenix-blog/">Isagenix Blog</a></li>
         
@@ -159,7 +146,7 @@
                 <span class="line" style="margin-bottom:30px;"></span>
                 <div class="clearfix"></div>
                 <p>Choose Isagenix because you will <strong>LOVE the results</strong>; more energy, better sleep, more lean muscle, faster recovery, stronger performance and less body fat! Everyone needs to get this in their body to truly understand what optimal health feels like.</p>
-                <a href="/compare-isagenix-systems/" class="button color" title="Compare Isagenix Systems &mdash; 9 day deep cleanse, 30 days cleansing and fat burner, 30 day performance pak, Presidents Pak"><i class="icon-shopping-cart"></i> Compare Isagenix starter kits now</a>
+                <a href="/compare-isagenix-systems/" class="button color btn-t26 btn-p15" title="Compare Isagenix Systems &mdash; 9 day deep cleanse, 30 days cleansing and fat burner, 30 day performance pak, Presidents Pak"><i class="icon-shopping-cart"></i> Compare Isagenix starter kits now</a>
 
             </div>
             <!-- end left side -->
@@ -438,10 +425,10 @@
 
                 <ul id="twitter"></ul>
                 <script type="text/javascript">
-                    jQuery(document).ready(function($){
-                        $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
-                    $("#twitter").html(tz_format_twitter(tweets));
-                    }); });
+                    // jQuery(document).ready(function($){
+                    //     $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
+                    // $("#twitter").html(tz_format_twitter(tweets));
+                    // }); });
                 </script>
                 <div class="clearfix"></div>
 
@@ -506,6 +493,23 @@
 
     </div>
     <!-- Footer Bottom / Start -->
+
+    <!-- include theme js files -->
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/jquery.themepunch.plugins.min.js"></script>
+    <script src="/scripts/jquery.themepunch.revolution.min.js"></script>
+    <script src="/scripts/jquery.themepunch.showbizpro.min.js"></script>
+    <script src="/scripts/jquery.easing.min.js"></script>
+    <script src="/scripts/jquery.tooltips.min.js"></script>
+    <script src="/scripts/jquery.magnific-popup.min.js"></script>
+    <script src="/scripts/jquery.superfish.js"></script>
+    <script src="/scripts/jquery.twitter.js"></script>
+    <script src="/scripts/jquery.flexslider.js"></script>
+    <script src="/scripts/jquery.jpanelmenu.js"></script>
+    <script src="/scripts/jquery.contact.js"></script>
+    <script src="/scripts/jquery.isotope.min.js"></script>
+    <script src="/scripts/custom.js"></script>
+
 
 </body>
 </html>
