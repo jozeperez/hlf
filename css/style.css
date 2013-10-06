@@ -3551,6 +3551,7 @@ blockquote .author span {
 .plan-image {
 	background: #e2e2e2;
 	padding: 5px;
+	overflow: hidden;
 }
 .plan-image img {
 	margin-left: auto;
