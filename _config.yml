@@ -10,8 +10,6 @@ mainNav:
           urlSlug: "/why-isagenix/"
         - title  : "Isagenix Systems"
           urlSlug: "/compare-isagenix-systems/"
-        - title  : "Other Isagenix Products"
-          urlSlug: "/isagenix-products/"
         - title  : "Become an Isagenix Consultant"
           urlSlug: "/isagenix-consultant/"
         - title  : "Isagenix Blog"
