@@ -12,6 +12,8 @@ mainNav:
           urlSlug: "/compare-isagenix-systems/"
         - title  : "Other Isagenix Products"
           urlSlug: "/isagenix-products/"
+        - title  : "Become an Isagenix Consultant"
+          urlSlug: "/isagenix-consultant/"
         - title  : "Isagenix Blog"
           urlSlug: "/isagenix-blog/"
     - title  : "About Us"
