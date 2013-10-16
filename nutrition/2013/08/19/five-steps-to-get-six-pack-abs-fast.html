@@ -130,10 +130,7 @@
                     // }); });
                 </script>
                 <div class="clearfix"></div>
-
                 <a href="https://twitter.com/Vasterad" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @Vasterad</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
             </div>
 
             <div class="four columns">
@@ -205,10 +202,23 @@
     <script src="/scripts/jquery.twitter.js"></script>
     <script src="/scripts/jquery.flexslider.js"></script>
     <script src="/scripts/jquery.jpanelmenu.js"></script>
-    <script src="/scripts/jquery.contact.js"></script>
+    <!-- <script src="/scripts/jquery.contact.js"></script> -->
     <script src="/scripts/jquery.isotope.min.js"></script>
     <script src="/scripts/custom.js"></script>
 
+
+    <!-- Twittle plugin -->
+    <script>
+        !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;
+                js.src=p+'://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js,fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+    </script>
 
 </body>
 </html>
