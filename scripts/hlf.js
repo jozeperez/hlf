@@ -1,3 +1,6 @@
+/**
+ * HLF.com namespace's core
+ */
 var hlf = (function( $ ){
 // private data
     var _modules  = [];
@@ -46,9 +49,23 @@ var hlf = (function( $ ){
 
     };
 
+/**
+ * HLF.com namespace's utilities
+ */
+    publik.util = {};
+
+    // scroll to
+    hlf.util.scrollTo = function() {
+        var formTarget = $( '.form-headline' );
+            if( formTarget.length ) {
+                $( 'html, body' ).stop().animate( { scrollTop: ( formTarget.offset().top - 80 ) }, { queue:false, duration:1000 } );
+            }
+    };
+
 // return public interface
     return publik;
 })(jQuery);
+
 
 /**
  * Forms module for HLF.com namespace
