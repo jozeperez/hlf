@@ -7,6 +7,7 @@ var hlf = (function( $ ){
     var _config   = {};
     var _sb = function() {
         this.console = publik.console;
+        this.util    = publik.util;
     };
 
 // private methods
@@ -55,11 +56,16 @@ var hlf = (function( $ ){
     publik.util = {};
 
     // scroll to
-    hlf.util.scrollTo = function() {
-        var formTarget = $( '.form-headline' );
-            if( formTarget.length ) {
-                $( 'html, body' ).stop().animate( { scrollTop: ( formTarget.offset().top - 80 ) }, { queue:false, duration:1000 } );
-            }
+    publik.util.scrollTo = function( triggerSelector ) {
+        // vars required
+        var trigger = $( triggerSelector );
+        var target = $( trigger.data( 'target' ) );
+        var extraOffset = parseInt( trigger.data( 'extra-offset' ) ) || 0;
+
+        // go to target, if exist
+        if( target.length ) {
+            $( 'html, body' ).stop().animate( { scrollTop: ( target.offset().top + extraOffset ) }, { queue:false, duration:1000 } );
+        }
     };
 
 // return public interface
