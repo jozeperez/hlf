@@ -1,12 +1,17 @@
 /**
- * HLF product page
+ * HLF forms module
  */
-hlf.register( 'productPage', function() {
+hlf.register( 'forms', function() {
 // private data
     // default config
     var _config = {
         apiUrl: '//{SUB-DOMAIN}.healthyleanandfit.com',
-        apiRequiredPreData: 'action=put&method=product_lead&'
+        apiRequiredPreData: 'domain='+location.hostname+'&',
+        cssSelectors: {
+            notificationTarget: '.notification',
+            notificationMsgTarget: '.notification .hlf-msg'
+        },
+        defaultErrorMsg: '<p><span>Error!</span> Please fill in all the fields required.</p>'
     };
 
     // sandbox reference
@@ -15,15 +20,17 @@ hlf.register( 'productPage', function() {
 // private methods
     // register all listeners for this module
     var _registerListeners = function() {
-        // green order button, take to form
-        $( '#content-wrapper' ).on( 'click', '.hlf-scroll-to',
-            function( e ) {
-                _sb.util.scrollTo( '.hlf-scroll-to' );
+        // green order button, take to form (if any)
+        if( $( '.hlf-scroll-to' ).size() ) {
+            $( '#content-wrapper' ).on( 'click', '.hlf-scroll-to',
+                function( e ) {
+                    _sb.util.scrollTo( '.hlf-scroll-to' );
 
-                // stop default action
-                e.preventDefault();
-            }
-        );
+                    // stop default action
+                    e.preventDefault();
+                }
+            );
+        }
 
         // form official submit button, send via ajax
         $( '#content-wrapper' ).on( 'click', '.hlf-submit',
@@ -60,7 +67,9 @@ hlf.register( 'productPage', function() {
 
                 // show notification banner
                 if( $( '.required.error', formTarget ).size() > 0 ) {
-                    $( '.notification' ).fadeIn();
+                    // insert error message in DOM and show
+                    $( _config.cssSelectors.notificationMsgTarget ).html( _config.defaultErrorMsg );
+                    $( _config.cssSelectors.notificationTarget ).removeClass( 'error success' ).addClass( 'error' ).fadeIn();
                 }
                 // OR initiate the submission
                 else {
@@ -73,15 +82,42 @@ hlf.register( 'productPage', function() {
                         url: _config.apiUrl,
                         data: _config.apiRequiredPreData+formTarget.serialize(),
                         success: function( data ) {
-                            console.log( data );
                             // success
-                            if( data.requestStatus === 200 ) {
+                            if( data.status === 'success' ) {
+                                // insert success message in DOM
+                                var successMsg = '<p><span>'+_sb.util.ucfirst( data.status )+'!</span> '+data.msg+'</p>';
+                                $( _config.cssSelectors.notificationMsgTarget ).html( successMsg );
 
+                                // hide tail and button
+                                loaderSpinner.fadeOut();
+                                submitButton.fadeOut();
+
+                                // lock all visible fields
+                                $( formTarget ).find( 'input, textarea' ).not( ':hidden' ).attr( 'disabled', 'disabled' );
                             }
                             // error, handle it
-                            else {
+                            else if( data.status === 'error' ) {
+                                var errorMsg = "";
+                                if( data.debug ) {
+                                    $.each( data.debug,
+                                        function( index, message ) {
+                                            errorMsg = errorMsg + '<p><span>'+_sb.util.ucfirst( data.status )+'!</span> '+message+'</p>';
+                                        }
+                                    );
+                                } else {
+                                    errorMsg = errorMsg + '<p><span>'+_sb.util.ucfirst( data.status )+'!</span> '+data.msg+'</p>';
+                                }
+                                
+                                // insert error message in DOM
+                                $( _config.cssSelectors.notificationMsgTarget ).html( errorMsg );
 
+                                // hide tail and activate button
+                                loaderSpinner.fadeOut();
+                                submitButton.removeAttr( 'disabled' );
                             }
+
+                            // add correct class to notification
+                            $( _config.cssSelectors.notificationTarget ).removeClass( 'error success' ).addClass( data.status ).fadeIn();
                         },
                         error : function( xhr, msg, e ) {
                             if( window.console ) {

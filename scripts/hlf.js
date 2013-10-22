@@ -68,6 +68,11 @@ var hlf = (function( $ ){
         }
     };
 
+    // uppercase first letter
+    publik.util.ucfirst = function( string ) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
 // return public interface
     return publik;
 })(jQuery);

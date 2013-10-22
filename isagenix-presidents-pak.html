@@ -3,7 +3,7 @@ layout: "default"
 title: "Isagenix Presidents Pak"
 shortTitle: "Isagenix Presidents Pak"
 permalink: "/isagenix-presidents-pak/"
-loadExtraJs: ['hlf', 'local.product']
+loadExtraJs: ['hlf', 'hlf.forms']
 initNamespace: true
 ---
     <div id="content-wrapper">
@@ -64,14 +64,18 @@ initNamespace: true
 
                 <section id="contact">
                     <!-- Success Message -->
-                    <div class="notification error closeable" style="display: none;">
-                        <p><span>Error!</span> Please fill in all the fields required.</p>
+                    <div class="notification closeable" style="display: none;">
+                        <div class="hlf-msg">
+                            <!-- insert via js -->
+                        </div>
                         <a class="close" href="#"></a>
                     </div>
 
                     <!-- Form -->
                     <form method="post" action="api.healthyleandandfit.com" id="hlf-leadform" onsubmit="return false;">
-                        <input type="hidden" name="product" value="president pak" />
+                        <input type="hidden" name="action" value="put" />
+                        <input type="hidden" name="method" value="product_lead" />
+                        <input type="hidden" name="product" value="{{ site.presidentPak.title }}" />
                         <fieldset>
                             <div>
                                 <label for="name" accesskey="N">

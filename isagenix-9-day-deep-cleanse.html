@@ -3,6 +3,8 @@ layout: "default"
 title: "Isagenix 9 day deep cleanse"
 shortTitle: "Isagenix 9 day deep cleanse"
 permalink: "/isagenix-9-day-deep-cleanse/"
+loadExtraJs: ['hlf', 'hlf.forms']
+initNamespace: true
 ---
     <div id="content-wrapper">
         <!-- titlebar -->
@@ -16,7 +18,7 @@ permalink: "/isagenix-9-day-deep-cleanse/"
                 
                 <p><img class="image-left" src="/images/products/product-9-day-deep-cleanse-weight-loss.jpg" style="width: 46%;" alt="Order {{ site.nineDayCleanse.keywords }}" />
                 <span class="dropcap">G</span>et weight loss and cleansing off to a fast start with the 9-day supply of the Cleansing and Fat Burning System. Seven pounds is the average weight loss for people using the Cleanse and Fat Burning System for nine days.* The five nutritional components of the system help you cleanse while infusing your body with premium nutrients for optimum health and safe weight loss. Stimulant free*.</p>
-                <a href="#{{ site.nineDayCleanse.title }}" class="button color" title="Order {{ site.nineDayCleanse.keywords }}"><i class="icon-shopping-cart"></i> Order now</a>
+                <a href="#{{ site.nineDayCleanse.title }}" class="button color hlf-scroll-to" data-extra-offset="-80" data-target=".form-headline" title="Order {{ site.nineDayCleanse.keywords }}"><i class="icon-shopping-cart"></i> Order now</a>
                 <div class="clearfix"></div>
 
                 <div class="full-width">
@@ -58,56 +60,55 @@ permalink: "/isagenix-9-day-deep-cleanse/"
                 <div class="clearfix"></div>
 
                 <!-- order form -->
-                <h3 class="headline" style="margin: 15px 0 0 0;">Order {{ page.title }} now</h3>
+                <h3 class="headline form-headline" style="margin: 15px 0 0 0;">Order {{ page.title }} now</h3>
                 <span class="line" style="margin-bottom: 35px;"></span>
                 <div class="clearfix"></div>
 
                 <section id="contact">
                     <!-- Success Message -->
-                    <mark id="message"></mark>
+                    <div class="notification closeable" style="display: none;">
+                        <div class="hlf-msg">
+                            <!-- insert via js -->
+                        </div>
+                        <a class="close" href="#"></a>
+                    </div>
 
                     <!-- Form -->
-                    <form method="post" action="contact.php" name="contactform" id="contactform">
-
+                    <form method="post" action="api.healthyleandandfit.com" id="hlf-leadform" onsubmit="return false;">
+                        <input type="hidden" name="action" value="put" />
+                        <input type="hidden" name="method" value="product_lead" />
+                        <input type="hidden" name="product" value="{{ site.nineDayCleanse.title }}" />
                         <fieldset>
-
                             <div>
-                                <label for="name" accesskey="U">
+                                <label for="name" accesskey="N">
                                     Name:
                                     <span>*</span>
                                 </label>
-                                <input name="name" type="text" id="name" />
+                                <input name="name" type="text" id="name" class="required" />
                             </div>
-
                             <div>
-                                <label for="email" accesskey="E">
-                                    Email:
-                                    <span>*</span>
-                                </label>
-                                <input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
-                            </div>
-
-                            <div>
-                                <label for="telephone" accesskey="E">
+                                <label for="telephone" accesskey="T">
                                     Telephone:
                                     <span>*</span>
                                 </label>
-                                <input name="telephone" type="text" id="telephone" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
+                                <input name="telephone" type="text" id="telephone" class="required is-telephone" />
                             </div>
-
                             <div>
-                                <label for="comments" accesskey="C">
-                                    Message:
-                                    <span>*</span>
+                                <label for="email" accesskey="E">
+                                    Email:
                                 </label>
-                                <textarea name="comments" cols="40" rows="3" id="comments" spellcheck="true"></textarea>
+                                <input name="email" type="text" id="email" class="is-email" />
                             </div>
-
+                            <div>
+                                <label for="message" accesskey="M">
+                                    Message:
+                                </label>
+                                <textarea name="message" cols="40" rows="3" id="message" spellcheck="true"></textarea>
+                            </div>
                         </fieldset>
-
-                        <input type="submit" class="submit" id="submit" value="Order {{ page.shortTitle }}" />
+                        <input type="submit" class="hlf-submit" value="Order {{ page.shortTitle }}" />
+                        <img src="/images/ajax-loader.gif" class="loader" style="display: none;" />
                         <div class="clearfix"></div>
-
                     </form>
                 </section>
             </div>

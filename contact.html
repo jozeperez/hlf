@@ -1,16 +1,17 @@
 ---
 layout: "default"
-title: "Contact Me"
+title: "Contact Us"
 permalink: "/contact/"
 loadMapEsentials: true
+loadExtraJs: ['hlf', 'hlf.forms', 'local.contact']
+initNamespace: true
 ---
-    <!-- Content Wrapper / Start -->
     <div id="content-wrapper">
         <!-- titlebar -->
 {% include title-bar.html %}
         <!-- end titlebar -->
 
-        <!-- Container -->
+        <!-- our location header -->
         <div class="container">
             <div class="sixteen columns">
                 <h3 class="headline">Our Location</h3>
@@ -18,111 +19,83 @@ loadMapEsentials: true
                 <div class="clearfix"></div>
             </div>
         </div>
-        <!-- Container / End -->
+        <!-- end our location header -->
 
-        <!-- Container -->
+        <!-- map -->
         <div class="container">
             <div class="sixteen columns">
 
-                <!-- Google Maps -->
+                <!-- google maps -->
                 <section class="google-map-container">
-
                     <div id="googlemaps" class="google-map google-map-full"></div>
-
-                    <script type="text/javascript">
-                    jQuery('#googlemaps').gMap({
-                        maptype: 'ROADMAP',
-                        scrollwheel: false,
-                        zoom: 7,
-                        markers: [
-                            {
-                                address: 'Orlando, FL, USA',
-                                html: '',
-                                popup: false
-                            },
-                            {
-                                address: 'Tampa, FL, USA',
-                                html: '',
-                                popup: false
-                            },
-                            {
-                                address: 'Gainesville, FL, USA',
-                                html: '',
-                                popup: false
-                            }
-                        ]
-                        // ,
-                        // latitude: -28.1,
-                        // longitude: -81.6
-                    });
-                </script>
-
                 </section>
-                <!-- Google Maps / End -->
+                <!-- end google maps -->
 
             </div>
         </div>
-        <!-- Container / End -->
+        <!-- end map -->
 
-        <!-- Container -->
+        <!-- contact form + information -->
         <div class="container">
 
+            <!-- form -->
             <div class="twelve alt columns">
 
                 <h3 class="headline">Contact Form</h3>
                 <span class="line" style="margin-bottom: 35px;"></span>
                 <div class="clearfix"></div>
 
-                <!-- Contact Form -->
                 <section id="contact">
-
                     <!-- Success Message -->
-                    <mark id="message"></mark>
+                    <div class="notification closeable" style="display: none;">
+                        <div class="hlf-msg">
+                            <!-- insert via js -->
+                        </div>
+                        <a class="close" href="#"></a>
+                    </div>
 
                     <!-- Form -->
-                    <form method="post" action="contact.php" name="contactform" id="contactform">
-
+                    <form method="post" action="api.healthyleandandfit.com" id="hlf-leadform" onsubmit="return false;">
+                        <input type="hidden" name="action" value="put" />
+                        <input type="hidden" name="method" value="contact_lead" />
                         <fieldset>
-
                             <div>
-                                <label for="name" accesskey="U">Name:</label>
-                                <input name="name" type="text" id="name" />
+                                <label for="name" accesskey="N">
+                                    Name:
+                                    <span>*</span>
+                                </label>
+                                <input name="name" type="text" id="name" class="required" />
                             </div>
-
+                            <div>
+                                <label for="telephone" accesskey="T">
+                                    Telephone:
+                                    <span>*</span>
+                                </label>
+                                <input name="telephone" type="text" id="telephone" class="required is-telephone" />
+                            </div>
                             <div>
                                 <label for="email" accesskey="E">
                                     Email:
-                                    <span>*</span>
                                 </label>
-                                <input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
+                                <input name="email" type="text" id="email" class="is-email" />
                             </div>
-
                             <div>
-                                <label for="comments" accesskey="C">
+                                <label for="message" accesskey="M">
                                     Message:
-                                    <span>*</span>
                                 </label>
-                                <textarea name="comments" cols="40" rows="3" id="comments" spellcheck="true"></textarea>
+                                <textarea name="message" cols="40" rows="3" id="message" spellcheck="true"></textarea>
                             </div>
-
                         </fieldset>
-
-                        <input type="submit" class="submit" id="submit" value="Send Message" />
+                        <input type="submit" class="hlf-submit" value="Send Message" />
+                        <img src="/images/ajax-loader.gif" class="loader" style="display: none;" />
                         <div class="clearfix"></div>
-
                     </form>
-
                 </section>
-                <!-- Contact Form / End -->
-
             </div>
-            <!-- Container / End -->
+            <!-- end form -->
 
-            <!-- Sidebar
-            ================================================== -->
+            <!-- information -->
             <div class="four columns">
-
-                <!-- Information -->
                 <div class="widget" style="margin-top:0;">
                     <h3 class="headline">Information</h3>
                     <span class="line"></span>
@@ -142,10 +115,12 @@ loadMapEsentials: true
                     </ul>
 
                     <ul class="contact-informations second">
-                        <li> <i class="icon-user"></i>
+                        <li>
+                            <i class="icon-user"></i>
                             <p>{{ site.footerTelephone }}</p>
                         </li>
-                        <li> <i class="icon-envelope-alt"></i>
+                        <li>
+                            <i class="icon-envelope-alt"></i>
                             <p>{{ site.footerEmail }}</p>
                         </li>
                         <li>
@@ -153,10 +128,8 @@ loadMapEsentials: true
                             <p>{{ site.mainUrl }}</p>
                         </li>
                     </ul>
-
                 </div>
 
-                <!-- Social -->
                 <div class="widget">
                     <h3 class="headline">Social Media</h3>
                     <span class="line" style="margin-bottom: 25px;"></span>
@@ -195,9 +168,8 @@ loadMapEsentials: true
                     </ul>
                     <div class="clearfix"></div>
                 </div>
-
             </div>
+            <!-- end information -->
         </div>
-        <!-- Container / End -->
-
+        <!-- end contact form + information -->
     </div>
