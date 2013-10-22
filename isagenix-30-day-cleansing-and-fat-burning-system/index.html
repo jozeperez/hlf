@@ -60,7 +60,7 @@
         
                                 <li><a href="/compare-isagenix-systems/">Isagenix Systems</a></li>
         
-                                <li><a href="/isagenix-consultant/">Become an Isagenix Consultant</a></li>
+                                <li><a href="/become-isagenix-consultant/">Become an Isagenix Consultant</a></li>
         
                                 <li><a href="/isagenix-blog/">Isagenix Blog</a></li>
         
@@ -126,7 +126,7 @@
                 
                 <p><img class="image-left" src="/images/products/product-30-day-cleanse-weight-loss.jpg" style="width: 46%;" alt="Order Isagenix 30 day cleansing and fat burning system, 30 day cleanse, Isagenix Cleansing, Isagenix Long term Weight-Loss, Cellular Cleansing" />
                 <span class="dropcap">T</span>his cleansing and fat burning “starter pak” is ideal for those individuals who want to lose weight using a long-term, flexible program. The system is a ground-breaking path to health weight loss and designed to gently rid the body of potentially harmful impurities, while infusing it with essential vitamins, botanicals and other natural ingredients to help shed pounds naturally without the use laxatives, stimulants or diuretics.</p>
-                <a href="#Isagenix 30 day cleansing and fat burning system" class="button color" title="Order Isagenix 30 day cleansing and fat burning system, 30 day cleanse, Isagenix Cleansing, Isagenix Long term Weight-Loss, Cellular Cleansing"><i class="icon-shopping-cart"></i> Order now</a>
+                <a href="#Isagenix 30 day cleansing and fat burning system" class="button color hlf-scroll-to" data-extra-offset="-80" data-target=".form-headline" title="Order Isagenix 30 day cleansing and fat burning system, 30 day cleanse, Isagenix Cleansing, Isagenix Long term Weight-Loss, Cellular Cleansing"><i class="icon-shopping-cart"></i> Order now</a>
                 <div class="clearfix"></div>
 
                 <div class="full-width">
@@ -169,56 +169,55 @@
                 <div class="clearfix"></div>
 
                 <!-- order form -->
-                <h3 class="headline" style="margin: 15px 0 0 0;">Order Isagenix 30 day cleansing and fat burning system now</h3>
+                <h3 class="headline form-headline" style="margin: 15px 0 0 0;">Order Isagenix 30 day cleansing and fat burning system now</h3>
                 <span class="line" style="margin-bottom: 35px;"></span>
                 <div class="clearfix"></div>
 
                 <section id="contact">
                     <!-- Success Message -->
-                    <mark id="message"></mark>
+                    <div class="notification closeable" style="display: none;">
+                        <div class="hlf-msg">
+                            <!-- insert via js -->
+                        </div>
+                        <a class="close" href="#"></a>
+                    </div>
 
                     <!-- Form -->
-                    <form method="post" action="contact.php" name="contactform" id="contactform">
-
+                    <form method="post" action="api.healthyleandandfit.com" id="hlf-leadform" onsubmit="return false;">
+                        <input type="hidden" name="action" value="put" />
+                        <input type="hidden" name="method" value="product_lead" />
+                        <input type="hidden" name="product" value="Isagenix 30 day cleansing and fat burning system" />
                         <fieldset>
-
                             <div>
-                                <label for="name" accesskey="U">
+                                <label for="name" accesskey="N">
                                     Name:
                                     <span>*</span>
                                 </label>
-                                <input name="name" type="text" id="name" />
+                                <input name="name" type="text" id="name" class="required" />
                             </div>
-
                             <div>
-                                <label for="email" accesskey="E">
-                                    Email:
-                                    <span>*</span>
-                                </label>
-                                <input name="email" type="email" id="email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
-                            </div>
-
-                            <div>
-                                <label for="telephone" accesskey="E">
+                                <label for="telephone" accesskey="T">
                                     Telephone:
                                     <span>*</span>
                                 </label>
-                                <input name="telephone" type="text" id="telephone" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" />
+                                <input name="telephone" type="text" id="telephone" class="required is-telephone" />
                             </div>
-
                             <div>
-                                <label for="comments" accesskey="C">
-                                    Message:
-                                    <span>*</span>
+                                <label for="email" accesskey="E">
+                                    Email:
                                 </label>
-                                <textarea name="comments" cols="40" rows="3" id="comments" spellcheck="true"></textarea>
+                                <input name="email" type="text" id="email" class="is-email" />
                             </div>
-
+                            <div>
+                                <label for="message" accesskey="M">
+                                    Message:
+                                </label>
+                                <textarea name="message" cols="40" rows="3" id="message" spellcheck="true"></textarea>
+                            </div>
                         </fieldset>
-
-                        <input type="submit" class="submit" id="submit" value="Order Isagenix 30 day fat burning" />
+                        <input type="submit" class="hlf-submit" value="Order Isagenix 30 day fat burning" />
+                        <img src="/images/ajax-loader.gif" class="loader" style="display: none;" />
                         <div class="clearfix"></div>
-
                     </form>
                 </section>
             </div>
@@ -397,21 +396,28 @@
     <!-- Footer Bottom / Start -->
 
     <!-- include theme js files -->
-    <script src="/scripts/jquery.min.js"></script>
-    <script src="/scripts/jquery.themepunch.plugins.min.js"></script>
-    <script src="/scripts/jquery.themepunch.revolution.min.js"></script>
-    <script src="/scripts/jquery.themepunch.showbizpro.min.js"></script>
-    <script src="/scripts/jquery.easing.min.js"></script>
-    <script src="/scripts/jquery.tooltips.min.js"></script>
-    <script src="/scripts/jquery.magnific-popup.min.js"></script>
-    <script src="/scripts/jquery.superfish.js"></script>
-    <script src="/scripts/jquery.twitter.js"></script>
-    <script src="/scripts/jquery.flexslider.js"></script>
-    <script src="/scripts/jquery.jpanelmenu.js"></script>
-    <!-- <script src="/scripts/jquery.contact.js"></script> -->
-    <script src="/scripts/jquery.isotope.min.js"></script>
-    <script src="/scripts/custom.js"></script>
+    <script src="/scripts/theme/jquery.min.js"></script>
+    <script src="/scripts/theme/jquery.themepunch.plugins.min.js"></script>
+    <script src="/scripts/theme/jquery.themepunch.revolution.min.js"></script>
+    <script src="/scripts/theme/jquery.themepunch.showbizpro.min.js"></script>
+    <script src="/scripts/theme/jquery.easing.min.js"></script>
+    <script src="/scripts/theme/jquery.tooltips.min.js"></script>
+    <script src="/scripts/theme/jquery.magnific-popup.min.js"></script>
+    <script src="/scripts/theme/jquery.superfish.js"></script>
+    <script src="/scripts/theme/jquery.twitter.js"></script>
+    <script src="/scripts/theme/jquery.flexslider.js"></script>
+    <script src="/scripts/theme/jquery.jpanelmenu.js"></script>
+    <!-- <script src="/scripts/theme/jquery.contact.js"></script> -->
+    <script src="/scripts/theme/jquery.isotope.min.js"></script>
+    <script src="/scripts/theme/custom.js"></script>
 
+    <script src="/scripts/hlf.js"></script>
+    <script src="/scripts/hlf.forms.js"></script>
+
+
+    <script type="text/javascript">
+    hlf.init();
+    </script>
 
     <!-- Twittle plugin -->
     <script>

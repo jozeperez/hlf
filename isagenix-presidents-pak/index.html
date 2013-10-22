@@ -60,7 +60,7 @@
         
                                 <li><a href="/compare-isagenix-systems/">Isagenix Systems</a></li>
         
-                                <li><a href="/isagenix-consultant/">Become an Isagenix Consultant</a></li>
+                                <li><a href="/become-isagenix-consultant/">Become an Isagenix Consultant</a></li>
         
                                 <li><a href="/isagenix-blog/">Isagenix Blog</a></li>
         
@@ -126,7 +126,7 @@
                 
                 <p><img class="image-left" src="/images/products/product-president-pak-weight-loss.jpg" style="width: 46%;" alt="Order Isagenix President's Pak, Isagenix Weight Loss President’s Pak, Isagenix Performance President’s Pak, Isagenix Healthy Aging President’s Pak, Isagenix Rejuvity President’s Pak" />
                 <span class="dropcap">I</span>f you’re ready to jumpstart your health and build your Isagenix® business, these business/value paks have everything you need, including free membership and a broad assortment of top-selling products and marketing tools. The business/value paks are a proven path to success. We offer four. Are you interested in weight loss, energy and performance, healthy aging or age-defying skin care?</p>
-                <a href="#Isagenix Presidents Pak" class="button color" title="Order Isagenix President's Pak, Isagenix Weight Loss President’s Pak, Isagenix Performance President’s Pak, Isagenix Healthy Aging President’s Pak, Isagenix Rejuvity President’s Pak"><i class="icon-shopping-cart"></i> Order now</a>
+                <a href="#Isagenix Presidents Pak" class="button color hlf-scroll-to" data-extra-offset="-80" data-target=".form-headline" title="Order Isagenix President's Pak, Isagenix Weight Loss President’s Pak, Isagenix Performance President’s Pak, Isagenix Healthy Aging President’s Pak, Isagenix Rejuvity President’s Pak"><i class="icon-shopping-cart"></i> Order now</a>
                 <div class="clearfix"></div>
 
                 <div class="full-width">
@@ -172,14 +172,18 @@
 
                 <section id="contact">
                     <!-- Success Message -->
-                    <div class="notification error closeable" style="display: none;">
-                        <p><span>Error!</span> Please fill in all the fields required.</p>
+                    <div class="notification closeable" style="display: none;">
+                        <div class="hlf-msg">
+                            <!-- insert via js -->
+                        </div>
                         <a class="close" href="#"></a>
                     </div>
 
                     <!-- Form -->
                     <form method="post" action="api.healthyleandandfit.com" id="hlf-leadform" onsubmit="return false;">
-                        <input type="hidden" name="product" value="president pak" />
+                        <input type="hidden" name="action" value="put" />
+                        <input type="hidden" name="method" value="product_lead" />
+                        <input type="hidden" name="product" value="Isagenix Presidents Pak" />
                         <fieldset>
                             <div>
                                 <label for="name" accesskey="N">
@@ -193,13 +197,13 @@
                                     Telephone:
                                     <span>*</span>
                                 </label>
-                                <input name="telephone" type="text" id="telephone" class="required" />
+                                <input name="telephone" type="text" id="telephone" class="required is-telephone" />
                             </div>
                             <div>
                                 <label for="email" accesskey="E">
                                     Email:
                                 </label>
-                                <input name="email" type="email" id="email" />
+                                <input name="email" type="text" id="email" class="is-email" />
                             </div>
                             <div>
                                 <label for="message" accesskey="M">
@@ -389,22 +393,28 @@
     <!-- Footer Bottom / Start -->
 
     <!-- include theme js files -->
-    <script src="/scripts/jquery.min.js"></script>
-    <script src="/scripts/jquery.themepunch.plugins.min.js"></script>
-    <script src="/scripts/jquery.themepunch.revolution.min.js"></script>
-    <script src="/scripts/jquery.themepunch.showbizpro.min.js"></script>
-    <script src="/scripts/jquery.easing.min.js"></script>
-    <script src="/scripts/jquery.tooltips.min.js"></script>
-    <script src="/scripts/jquery.magnific-popup.min.js"></script>
-    <script src="/scripts/jquery.superfish.js"></script>
-    <script src="/scripts/jquery.twitter.js"></script>
-    <script src="/scripts/jquery.flexslider.js"></script>
-    <script src="/scripts/jquery.jpanelmenu.js"></script>
-    <!-- <script src="/scripts/jquery.contact.js"></script> -->
-    <script src="/scripts/jquery.isotope.min.js"></script>
-    <script src="/scripts/custom.js"></script>
+    <script src="/scripts/theme/jquery.min.js"></script>
+    <script src="/scripts/theme/jquery.themepunch.plugins.min.js"></script>
+    <script src="/scripts/theme/jquery.themepunch.revolution.min.js"></script>
+    <script src="/scripts/theme/jquery.themepunch.showbizpro.min.js"></script>
+    <script src="/scripts/theme/jquery.easing.min.js"></script>
+    <script src="/scripts/theme/jquery.tooltips.min.js"></script>
+    <script src="/scripts/theme/jquery.magnific-popup.min.js"></script>
+    <script src="/scripts/theme/jquery.superfish.js"></script>
+    <script src="/scripts/theme/jquery.twitter.js"></script>
+    <script src="/scripts/theme/jquery.flexslider.js"></script>
+    <script src="/scripts/theme/jquery.jpanelmenu.js"></script>
+    <!-- <script src="/scripts/theme/jquery.contact.js"></script> -->
+    <script src="/scripts/theme/jquery.isotope.min.js"></script>
+    <script src="/scripts/theme/custom.js"></script>
 
-    <script src="/scripts/local.product.js"></script>
+    <script src="/scripts/hlf.js"></script>
+    <script src="/scripts/hlf.forms.js"></script>
+
+
+    <script type="text/javascript">
+    hlf.init();
+    </script>
 
     <!-- Twittle plugin -->
     <script>
