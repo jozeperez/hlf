@@ -1,5 +1,8 @@
 name: "Healthy, Lean and Fit"
+slogan: "Powered by Isagenix Nutrition"
 mainUrl : "www.HealthyLeanAndFit.com"
+description: "A group of fun individuals that share the Isagenix nutrition. Isagenix is the best nutrition in the market. Isagenix is the world leader in healthy weight loss."
+
 mainNav:
     - title  : "Home"
       urlSlug: "/"
@@ -20,6 +23,7 @@ mainNav:
       urlSlug: "/success-stories/"
     - title  : "Contact"
       urlSlug: "/contact/"
+
 addressLine1: "Orlando, FL, USA"
 addressLine2: "Tampa, FL, USA"
 addressLine3: "Gainesville, FL, USA"

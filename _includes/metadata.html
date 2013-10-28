@@ -1,14 +1,13 @@
-    <!-- Basic Page Needs
-    ================================================== -->
     <meta charset="utf-8">
-    <title>{{ page.title }} &#9733; {{ site.name }} &#9733; Isagenix</title>
+    <title>{{ page.title }} &#9733; {{ site.name }} &#9733; {{ site.slogan }}</title>
 
-    <!-- Mobile Specific Metas
-    ================================================== -->
+    <meta name="title" content="{{ page.title }} &mdash; {{ site.name }} &mdash; {{ site.slogan }}" />
+    <meta name="generator" content="WordPress.com" />
+    <meta name="application-name" content="{{ site.name }} &mdash; {{ site.slogan }}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- CSS
-    ================================================== -->
+    <!-- css styles -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/colors/green.css" id="colors">
 
