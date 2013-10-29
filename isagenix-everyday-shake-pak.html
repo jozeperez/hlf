@@ -1,0 +1,139 @@
+---
+layout: "default"
+title: "Isagenix Everyday shake pak"
+shortTitle: "Isagenix Everyday shake pak"
+permalink: "/isagenix-everyday-shake-pak/"
+loadExtraJs: ['hlf', 'hlf.forms']
+initNamespace: true
+description: "Isagenix Everyday shake pak. Nutrient rich, low-calorie meal replacement shakes which are core of the healthy Isagenix lifestyle. Sustained healthy weight loss."
+---
+    <div id="content-wrapper">
+        <!-- titlebar -->
+{% include title-bar.html %}
+        <!-- end titlebar -->
+
+        <div class="container">
+            <!-- product description + order form -->
+            <div class="twelve alt columns" >
+                <h3 class="headline">Looking for your healthy breakfast?</h3><span class="line" style="margin-bottom: 30px;"></span><div class="clearfix"></div>
+                
+                <p><img class="image-left" src="/images/products/product-everyday-shake-pak-weight-loss.jpg" style="width: 46%;" alt="Order {{ site.everydayShakePak.keywords }}" />
+                <span class="dropcap">S</span>tock up on our nutrient rich, low-calorie meal replacement shakes that are a core component of our systems and the healthy Isagenix lifestyle. Enjoy two shakes every day in place of meals to safely reduce your calories and help satisfy your appetite by filling you with heart-healthy fiber, vitamins and our proprietary blend of minerals.</p>
+                <a href="#{{ site.everydayShakePak.title }}" class="button color hlf-scroll-to" data-extra-offset="-80" data-target=".form-headline" title="Order {{ site.everydayShakePak.keywords }}"><i class="icon-shopping-cart"></i> Order now</a>
+                <div class="clearfix"></div>
+
+                <div class="full-width">
+                    <!-- experience -->
+                    <div class="widget fleft-half-width">
+                        <h3 class="headline">Benefits:</h3>
+                        <span class="line"></span>
+                        <div class="clearfix"></div>
+                        
+                        <ul class="list-3">
+                            <li>Nutrient rich</li>
+                            <li>Low-calorie</li>
+                            <li>Heart-healthy fiber</li>
+                            <li>Vitamins</li>
+                            <li>Proprietary blend of minerals</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end experience -->
+
+                    <!-- system components -->
+                    <div class="widget fleft-half-width">
+                        <h3 class="headline">Components:</h3>
+                        <span class="line"></span>
+                        <div class="clearfix"></div>
+                        
+                        <ul class="list-3">
+                            <li>4 canisters IsaLean® Shake</li>
+                        </ul>
+                        <div class="clearfix"></div>
+
+                        <h3 class="headline">Flavors:</h3>
+                        <div class="clearfix"></div>
+                        
+                        <ul class="list-3">
+                            <li>Creamy French Vanilla</li>
+                            <li>Creamy Dutch Chocolate</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end system components -->
+                </div>
+                <div class="clearfix"></div>
+
+                <!-- order form -->
+                <h3 class="headline form-headline" style="margin: 15px 0 0 0;">Order {{ page.title }} now</h3>
+                <span class="line" style="margin-bottom: 35px;"></span>
+                <div class="clearfix"></div>
+
+                <section id="contact">
+                    <!-- Success Message -->
+                    <div class="notification closeable" style="display: none;">
+                        <div class="hlf-msg">
+                            <!-- insert via js -->
+                        </div>
+                        <a class="close" href="#"></a>
+                    </div>
+
+                    <!-- Form -->
+                    <form method="post" action="api.healthyleandandfit.com" id="hlf-leadform" onsubmit="return false;">
+                        <input type="hidden" name="action" value="put" />
+                        <input type="hidden" name="method" value="product_lead" />
+                        <input type="hidden" name="product" value="{{ site.everydayShakePak.title }}" />
+                        <fieldset>
+                            <div>
+                                <label for="name" accesskey="N">
+                                    Name:
+                                    <span>*</span>
+                                </label>
+                                <input name="name" type="text" id="name" class="required" />
+                            </div>
+                            <div>
+                                <label for="telephone" accesskey="T">
+                                    Telephone:
+                                    <span>*</span>
+                                </label>
+                                <input name="telephone" type="text" id="telephone" class="required is-telephone" />
+                            </div>
+                            <div>
+                                <label for="email" accesskey="E">
+                                    Email:
+                                </label>
+                                <input name="email" type="text" id="email" class="is-email" />
+                            </div>
+                            <div>
+                                <label for="message" accesskey="M">
+                                    Message:
+                                </label>
+                                <textarea name="message" cols="40" rows="3" id="message" spellcheck="true"></textarea>
+                            </div>
+                        </fieldset>
+                        <input type="submit" class="hlf-submit" value="Order {{ page.shortTitle }}" />
+                        <img src="/images/ajax-loader.gif" class="loader" style="display: none;" />
+                        <div class="clearfix"></div>
+                    </form>
+                </section>
+            </div>
+            <!-- end product description + order form -->
+
+            <!-- sidebar (right side) -->
+            <div class="four columns">
+
+                <!-- About -->
+                <div class="widget">
+                    <h3 class="headline">About Us</h3>
+                    <span class="line"></span>
+                    <div class="clearfix"></div>
+                    <p>Healthy, Lean and Fit brings together a group of fun goal driven individuals that have the same passion. We strive to live a healthier lifestyle while helping others... <a href="/about-us/">read more</a></p>
+                </div>
+
+                <!-- starter systems -->
+                {% include widget-starter-systems.html %}
+                <!-- end starter systems -->
+            </div>
+            <!-- end sidebar (right side) -->
+        </div>
+    </div>

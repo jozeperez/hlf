@@ -428,7 +428,8 @@
 		  
 		  callbacks: {
 			buildControls: function() {
-			 console.log('inside'); this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+			 // console.log('inside');
+			 this.contentContainer.append(this.arrowLeft/*.add(this.arrowRight)*/);
 			}
 		  }
 		});

@@ -21,13 +21,28 @@ associateThumbnails:
     - name    : 'Gustavo Urbina'
       fileSlug: 'gustavo'
       product : 'Isagenix 30 day cleanse system'
+successStories:
+    - name    : 'Joze Perez'
+      fileSlug: 'joze-perez'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Juan Cruz'
+      fileSlug: 'juan-cruz'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Liva Rivera'
+      fileSlug: 'liva-rivera'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : "Rich O'Dea"
+      fileSlug: 'rich-odea'
+      product : 'Isagenix 30 day cleanse system'
+    - name    : 'Jose Diaz-Lizardo'
+      fileSlug: 'jr-diaz'
+      product : 'Isagenix 30 day cleanse system'
+hideSuccessStoriesNav : true
 description: "With Isagenix as our backbone, we offer the best nutrition in the market with the best support community in Florida and USA. Join Healthy, Lean and Fit today."
 ---
-	<!-- Content Wrapper / Start -->
     <div id="content-wrapper">
 
-        <!-- Slider
-        ================================================== -->
+        <!-- slider -->
         <div class="fullwidthbanner-container">
             <div class="fullwidthbanner">
                 <ul>
@@ -101,61 +116,57 @@ description: "With Isagenix as our backbone, we offer the best nutrition in the 
                 </ul>
             </div>
         </div>
+        <!-- end slider -->
 
-
-        <!-- Featured Boxes
-        ================================================== -->
-        <!-- Container -->
+        <!-- feature boxes -->
         <div class="container">
-        <div class="featured-boxes homepage">
+            <div class="featured-boxes homepage">
 
-            <div class="one-third column">
+                <div class="one-third column">
 
-                <!-- Featured Box -->
-                <div class="featured-box">
-                    <div class="circle"><i class="icon-wrench"></i><span></span></div>
-                    <div class="featured-desc">
-                        <h3>Health</h3>
-                        <p>An estimated 300,000 deaths per year may be attributable to obesity.<br /><a href="#">Don't be part of the statistic!</a></p>
+                    <!-- Featured Box -->
+                    <div class="featured-box">
+                        <div class="circle"><i class="icon-wrench"></i><span></span></div>
+                        <div class="featured-desc">
+                            <h3>Health</h3>
+                            <p>An estimated 300,000 deaths per year may be attributable to obesity.<br /><a href="/why-isagenix/" title="Isagenix is an organic food system. Learn why you should choose Isagenix">Don't be part of the statistic!</a></p>
+                        </div>
                     </div>
+
+                </div>
+
+                <div class="one-third column">
+
+                    <!-- Featured Box -->
+                    <div class="featured-box">
+                        <div class="circle"><i class="icon-screenshot"></i><span></span></div>
+                        <div class="featured-desc">
+                            <h3>Happiness</h3>
+                            <p>Exercise has a positive effect on our body as well as our mental health.<br /><a href="/why-isagenix/" title="Isagenix is an organic food system. Learn why you should choose Isagenix">Get on your way to a happy life.</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="one-third column">
+
+                    <!-- Featured Box -->
+                    <div class="featured-box homepage">
+                        <div class="circle"><i class="icon-magic"></i><span></span></div>
+                        <div class="featured-desc">
+                            <h3>Freedom</h3>
+                            <p>Tired of slaving away at a dead-end job? Tired of being part of the 99%? <a href="/become-isagenix-consultant/" title="Become an Isagenix Consultant and learn how to get your Isagenix products paid for.">Financial freedom, health and happiness is one click way!</a></p>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
-
-            <div class="one-third column">
-
-                <!-- Featured Box -->
-                <div class="featured-box">
-                    <div class="circle"><i class="icon-screenshot"></i><span></span></div>
-                    <div class="featured-desc">
-                        <h3>Happiness</h3>
-                        <p>Exercise has a positive effect on our body as well as our mental health.<br /><a href="#">Get on your way to a happy life.</a></p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="one-third column">
-
-                <!-- Featured Box -->
-                <div class="featured-box homepage">
-                    <div class="circle"><i class="icon-magic"></i><span></span></div>
-                    <div class="featured-desc">
-                        <h3>Freedom</h3>
-                        <p>Tired of slaving away at a dead-end job? Tired of being part of the 99%? <a href="#">Financial freedom, health and happiness is one click way!</a></p>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
-        </div>
-        <!-- Container / End -->
+        <!-- end feature boxes -->
 
 
-        <!-- ShowBiz Carousel
-        ================================================== -->
-        <!-- Container -->
+        <!-- starter kits -->
         <div class="container">
 
             <!-- Headline -->
@@ -185,15 +196,15 @@ description: "With Isagenix as our backbone, we offer the best nutrition in the 
                                 <div class="portfolio-item media">
                                     <figure>
                                         <div class="mediaholder">
-                                            <a href="/images/products/product-president-pak-weight-loss-hd.jpg" class="mfp-gallery" title="Weight Loss President’s Pak by Isagenix">
-                                                <img alt="" src="/images/products/product-president-pak-weight-loss.jpg"/>
+                                            <a href="{{ site.presidentPak.url }}" title="{{ site.presidentPak.url }} Weight-Loss by Isagenix">
+                                                <img alt="{{ site.presidentPak.url }} Weight-Loss by Isagenix" src="/images/products/product-president-pak-weight-loss.jpg"/>
                                                 <div class="hovercover">
-                                                    <div class="hovericon"><i class="hoverzoom"></i></div>
+                                                    <div class="hovericon"><i class="hoverlink"></i></div>
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <a href="single-project-half.html">
+                                        <a href="{{ site.presidentPak.url }}" title="{{ site.presidentPak.url }} Weight-Loss by Isagenix">
                                             <figcaption class="item-description">
                                                 <h5>President’s Pak</h5>
                                                 <span>Weight Loss</span>
@@ -209,15 +220,15 @@ description: "With Isagenix as our backbone, we offer the best nutrition in the 
                                 <div class="portfolio-item media">
                                     <figure>
                                         <div class="mediaholder">
-                                            <a href="/images/products/product-30-day-cleanse-weight-loss-hd.jpg" class="mfp-gallery" title="Weight Loss 30 Day Cleanse">
-                                                <img alt="" src="/images/products/product-30-day-cleanse-weight-loss.jpg"/>
+                                            <a href="{{ site.thirtyDayCleanse.url }}" title="{{ site.thirtyDayCleanse.title }} by Isagenix">
+                                                <img alt="{{ site.thirtyDayCleanse.title }} by Isagenix" src="/images/products/product-30-day-cleanse-weight-loss.jpg"/>
                                                 <div class="hovercover">
-                                                    <div class="hovericon"><i class="hoverzoom"></i></div>
+                                                    <div class="hovericon"><i class="hoverlink"></i></div>
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <a href="single-project-wide.html">
+                                        <a href="{{ site.thirtyDayCleanse.url }}" title="{{ site.thirtyDayCleanse.title }} by Isagenix">
                                             <figcaption class="item-description">
                                                 <h5>30 Day Cleanse System</h5>
                                                 <span>Weight Loss</span>
@@ -232,15 +243,15 @@ description: "With Isagenix as our backbone, we offer the best nutrition in the 
                                 <div class="portfolio-item media">
                                     <figure>
                                         <div class="mediaholder">
-                                            <a href="/images/products/product-30-day-cleanse-performance-atheletic-hd.jpg" class="mfp-gallery" title="Atheletic Performance 30 Day Cleanse">
-                                                <img alt="" src="/images/products/product-30-day-cleanse-performance-atheletic.jpg"/>
+                                            <a href="{{ site.thirtyDayPerformance.url }}" title="{{ site.thirtyDatPerformance.title }} by Isagenix">
+                                                <img alt="{{ site.thirtyDatPerformance.title }} by Isagenix" src="/images/products/product-30-day-cleanse-performance-atheletic.jpg"/>
                                                 <div class="hovercover">
-                                                    <div class="hovericon"><i class="hoverzoom"></i></div>
+                                                    <div class="hovericon"><i class="hoverlink"></i></div>
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <a href="single-project-wide.html">
+                                        <a href="{{ site.thirtyDayPerformance.url }}" title="{{ site.thirtyDatPerformance.title }} by Isagenix">
                                             <figcaption class="item-description">
                                                 <h5>30 Day Performance Pak</h5>
                                                 <span>Atheletic Performance</span>
@@ -255,15 +266,15 @@ description: "With Isagenix as our backbone, we offer the best nutrition in the 
                                 <div class="portfolio-item media">
                                     <figure>
                                         <div class="mediaholder">
-                                            <a href="/images/products/product-9-day-deep-cleanse-weight-loss-hd.jpg" class="mfp-gallery" title="Weight Loss 9 Day Deep Cleanse">
-                                                <img alt="" src="/images/products/product-9-day-deep-cleanse-weight-loss.jpg"/>
+                                            <a href="{{ site.nineDayCleanse.url }}" title="{{ site.nineDayCleanse.title }} by Isagenix">
+                                                <img alt="{{ site.nineDayCleanse.title }} by Isagenix" src="/images/products/product-9-day-deep-cleanse-weight-loss.jpg"/>
                                                 <div class="hovercover">
-                                                    <div class="hovericon"><i class="hoverzoom"></i></div>
+                                                    <div class="hovericon"><i class="hoverlink"></i></div>
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <a href="single-project-wide.html">
+                                        <a href="{{ site.nineDayCleanse.url }}" title="{{ site.nineDayCleanse.title }} by Isagenix">
                                             <figcaption class="item-description">
                                                 <h5>9 Day Deep Cleanse</h5>
                                                 <span>Weight Loss</span>
@@ -305,54 +316,63 @@ description: "With Isagenix as our backbone, we offer the best nutrition in the 
                 </div>
             </div>
         </div>
-        <!-- Container / End -->
+        <!-- end starter kits -->
 
         <br />
 
-        <!-- Our Clients
-        ================================================== -->
-        <!-- Container -->
+        <!-- success stories -->
         <div class="container">
 
-            <!-- Headline -->
+            <!-- title -->
             <div class="sixteen columns">
                 <h3 class="headline">Success Stories</h3>
                 <span class="line" style="margin-bottom:0;"></span>
             </div>
+            <!-- end title -->
 
-            <!-- Navigation / Left -->
-            <div class="one carousel column"><div id="showbiz_left_2" class="sb-navigation-left-2"><i class="icon-angle-left"></i></div></div>
+{% unless page.hideSuccessStoriesNav %}
+            <!-- navigation left -->
+            <div class="one carousel column">
+                <div id="showbiz_left_2" class="sb-navigation-left-2">
+                    <i class="icon-angle-left"></i>
+                </div>
+            </div>
+            <!-- end navigation left -->
+{% endunless %}
 
-            <!-- ShowBiz Carousel -->
+            <!-- carousel -->
             <div id="our-clients" class="showbiz-container fourteen carousel columns" >
+                <div class="showbiz our-clients" data-left="#showbiz_left_2" data-right="#showbiz_right_2">
+                    <div class="overflowholder">
 
-            <!-- Portfolio Entries -->
-            <div class="showbiz our-clients" data-left="#showbiz_left_2" data-right="#showbiz_right_2">
-                <div class="overflowholder">
+                        <ul>
+                            <!-- Item -->
+    {% for story in page.successStories %}
+                            <li>
+                                <a href="/success-stories/" title="Success Stories of Healthy Weight-loss with Isagenix">
+                                    <img src="/images/hlf-success-story-{{ story.fileSlug }}-small-round.png" alt="{{ story.name }} started with {{ associate.product }}" />
+                                </a>
+                            </li>
+    {% endfor %}
+                        </ul>
+                        <div class="clearfix"></div>
 
-                    <ul>
-                        <!-- Item -->
-{% for associate in page.associateThumbnails %}
-                        <li>
-                            <a href="#">
-                                <img src="/images/associates/associate-{{ associate.fileSlug }}.png" alt="{{ associate.name }} started with {{ associate.product }}" />
-                            </a>
-                        </li>
-{% endfor %}
-                    </ul>
+                    </div>
                     <div class="clearfix"></div>
 
                 </div>
-                <div class="clearfix"></div>
-
             </div>
+            <!-- end carousel -->
+
+{% unless page.hideSuccessStoriesNav %}
+            <!-- navigation right -->
+            <div class="one carousel column">
+                <div id="showbiz_right_2" class="sb-navigation-right-2">
+                    <i class="icon-angle-right"></i>
+                </div>
             </div>
-
-            <!-- Navigation / Right -->
-            <div class="one carousel column"><div id="showbiz_right_2" class="sb-navigation-right-2"><i class="icon-angle-right"></i></div></div>
-
+            <!-- end navigation right -->
+{% endunless %}
         </div>
-        <!-- Container / End -->
-
+        <!-- end success stories -->
     </div>
-    <!-- Content Wrapper / End -->
