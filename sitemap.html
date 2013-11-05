@@ -1,0 +1,65 @@
+---
+layout: "ajax"
+permalink: "sitemap.xml"
+siteLinks:
+    - loc: 'www.healthyleanandfit.com/'
+      lastmod: 'today'
+      changefreq: 'weekly'
+      priority: 0.6
+    - loc: 'www.healthyleanandfit.com/why-isagenix/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 0.6
+    - loc: 'www.healthyleanandfit.com/compare-isagenix-systems/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 1
+    - loc: 'www.healthyleanandfit.com/become-isagenix-consultant/'
+      lastmod: 'today'
+      changefreq: 'weekly'
+      priority: 0.8
+    - loc: 'www.healthyleanandfit.com/isagenix-blog/'
+      lastmod: 'today'
+      changefreq: 'weekly'
+    - loc: 'www.healthyleanandfit.com/about-us/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+    - loc: 'www.healthyleanandfit.com/success-stories/'
+      lastmod: 'today'
+      changefreq: 'weekly'
+      priority: 0.8
+    - loc: 'www.healthyleanandfit.com/contact/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+    - loc: 'www.healthyleanandfit.com/isagenix-9-day-deep-cleanse/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 0.6
+    - loc: 'www.healthyleanandfit.com/isagenix-30-day-cleansing-and-fat-burning-system/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 0.6
+    - loc: 'www.healthyleanandfit.com/isagenix-30-day-performance-pak-system/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 0.6
+    - loc: 'www.healthyleanandfit.com/isagenix-presidents-pak/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 0.6
+    - loc: 'www.healthyleanandfit.com/isagenix-everyday-shake-pak/'
+      lastmod: 'today'
+      changefreq: 'monthly'
+      priority: 0.6
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for url in page.siteLinks %}
+    <url>
+        {% if url.loc %}<loc>http://{{url.loc}}</loc>{% endif %}
+        {% if url.lastmod %}<lastmod>{% if url.lastmod == 'today' %}{{ site.time | date: "%Y-%m-%d" }}{% else %}{url.lastmod}{% endif %}</lastmod>{% endif %}
+        {% if url.changefreq %}<changefreq>monthly</changefreq>{% endif %}
+        {% if url.priority %}<priority>{{url.priority}}</priority>{% endif %}
+    </url>
+{% endfor %}
+</urlset>
