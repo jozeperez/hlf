@@ -24,6 +24,19 @@
 </head>
 <body>
 
+    <!-- fb sdk -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=497612743670108";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- end fb sdk -->
+
     <!-- header -->
     <header id="header">
         <div class="container">
@@ -121,16 +134,13 @@
 
             <div class="four columns">
                 <h3>Twitter</h3>
-
                 <ul id="twitter"></ul>
-                <script type="text/javascript">
-                    // jQuery(document).ready(function($){
-                    //     $.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
-                    // $("#twitter").html(tz_format_twitter(tweets));
-                    // }); });
-                </script>
                 <div class="clearfix"></div>
                 <a href="https://twitter.com/HealthyLeanFit" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @HealthyLeanFit</a>
+                
+                <div class="clearfix"></div>
+                <h3>Facebook</h3>
+                <div class="fb-like-box" data-href="http://www.facebook.com/HealthyLeanAndFit" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false" data-width="280"></div>
             </div>
 
             <div class="four columns">
