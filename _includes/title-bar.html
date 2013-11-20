@@ -4,13 +4,15 @@
                         <h2>{{ page.title }}</h2>
                     </div>
                     <div class="eight columns">
-                        <nav id="breadcrumbs">
+                        <nav id="breadcrumbs" class="flt-right">
                             <ul>
                                 <li></li>
                                 <li><a href="/" title="Home of {{ site.name }} &#9733; {{ site.slogan }}">Home</a></li>
                                 <li>{% if page.shortTitle %}{{ page.shortTitle }}{% else %}{{ page.title }}{% endif %}</li>
                             </ul>
                         </nav>
+                        <div class="clearfix"></div>
+                        <div class="fb-like flt-right" data-href="https://www.facebook.com/healthyleanandfit" data-width="280" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                     </div>
                 </div>
             </section>
