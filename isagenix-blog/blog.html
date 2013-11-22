@@ -1,7 +1,7 @@
 ---
 layout: "default"
 title: "Isagenix&reg; Blog"
-permalink: "/isagenix-blog/"
+permalink: "/"
 description: "Our Isagenix blog has helpful articles, news and recipes from all major Isagenix websites and media sources in one easy place: The Healthy, Lean and Fit Blog."
 ---
     <div id="content-wrapper">
@@ -19,7 +19,11 @@ description: "Our Isagenix blog has helpful articles, news and recipes from all 
                     <div class="five alt columns alpha">
                         <figure class="post-img media">
                             <div class="mediaholder">
+    {% if post.internalUrl %}
+                                <a href="{{ post.internalUrl }}" title="Read full article over at our Isagenix Blog">
+    {% else %}
                                 <a href="{{ post.externalUrl }}" target="_blank" title="Read full article over at {{ post.externalSource }}">
+    {% endif%}
                                     <img src="/images/{{ post.image }}" alt="{{ post.title }} – {{ post.externalSource }}"/>
                                     <div class="hovercover">
                                         <div class="hovericon"><i class="hoverlink"></i></div>
@@ -31,14 +35,26 @@ description: "Our Isagenix blog has helpful articles, news and recipes from all 
                     <div class="seven columns">
                         <section class="post-content">
                             <header class="meta">
-                                <h2><a href="{{ post.externalUrl }}" target="_blank">{{ post.title }}</a></h2>
+                                <h2>
+    {% if post.internalUrl %}
+                                    <a href="{{ post.internalUrl }}" title="Read full article over at our Isagenix Blog">
+    {% else %}
+                                    <a href="{{ post.externalUrl }}" target="_blank">
+    {% endif%}
+                                        {{ post.title }}
+                                    </a>
+                                </h2>
                                 <ul>
                                     <li>By {{ post.author }} - {{ post.date | date_to_string }}</li>
                                     <!-- <li><a href="#">0 Comments</a></li> -->
                                 </ul>
                             </header>
                             {{ post.excerpt }}
+    {% if post.internalUrl %}
+                            <a href="{{ post.internalUrl }}" class="button color" title="Read full article over at our Isagenix Blog">Read More</a>
+    {% else %}
                             <a href="{{ post.externalUrl }}" target="_blank" class="button color" title="Read full article over at {{ post.externalSource }}">Read More</a>
+    {% endif%}
                         </section>
                     </div>
                     <div class="clearfix"></div>
